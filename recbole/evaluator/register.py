@@ -46,6 +46,8 @@ def cluster_info(module_name):
     for name, metric_cls in metric_class:
         name = name.lower()
         m_dict[name] = metric_cls
+        if name = 'custommetric':
+            continue
         if hasattr(metric_cls, "metric_need"):
             m_info[name] = metric_cls.metric_need
         else:
